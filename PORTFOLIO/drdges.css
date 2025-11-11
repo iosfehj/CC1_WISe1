@@ -1,0 +1,330 @@
+/* Allgemeine Einstellungen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Roboto, sans-serif;
+}
+
+/* Menüleiste */
+.navbar {
+    width: 100%;
+    max-width: 1440px;
+    height: 60px;
+    background: #302F2C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #EFEDE3;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    opacity: 0.7;
+}
+
+/* Geteiltes Layout */
+/* Geteiltes Layout für Startseite */
+.split {
+    display: flex;
+    width: 100%;
+    height: 100vh;       /* gesamte Höhe des Viewports */
+    margin: 0;            /* kein extra Margin */
+    padding: 0;           /* kein extra Padding */
+}
+
+/* Linke Hälfte */
+.left-link {
+    flex: 1;              /* exakt 50% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    background: white;    /* linke Hälfte weiß */
+}
+
+.left-link:hover {
+    background: #f2f2f2; /* leichte Hover-Färbung */
+    cursor: pointer;
+}
+
+/* Text zentriert in linker Hälfte */
+.center-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    color: #302F2C;
+}
+
+
+/* Rechte Hälfte */
+.right {
+    flex: 1;              /* exakt 50% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* Inhalt oben */
+    background: #EFEDE3;          /* rechte Hälfte beige */
+    padding-top: 60px;            /* Abstand zum oberen Rand */
+    padding-bottom: 40px;
+}
+
+/* Bild rechts */
+.right-image {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Text rechts */
+.right-text {
+    width: 480px;
+    max-width: 90%;
+    text-align: center;
+    color: #302F2C;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Button rechts */
+.next-button {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 2px solid #302F2C;
+    border-radius: 8px;
+    background: transparent;
+    color: #302F2C;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+
+    margin-top: 60px; /* mehr Abstand nach oben */
+}
+
+
+.next-button:hover {
+    background: #302F2C;
+    color: #fff;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 1024px) {
+    .center-text {
+        font-size: 55px;
+    }
+    .right-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .split {
+        flex-direction: column; /* Hälften untereinander auf kleineren Bildschirmen */
+        height: auto;
+        margin-top: 0;
+    }
+    .left-link, .right {
+        width: 100%;
+        height: 50vh;
+    }
+    .center-text {
+        font-size: 45px;
+    }
+    .right-text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .center-text {
+        font-size: 35px;
+    }
+    .right-text {
+        font-size: 14px;
+    }
+    .next-button {
+        font-size: 16px;
+    }
+}
+
+/* Menüleiste */
+.navbar {
+    width: 100%;
+    max-width: 1440px;
+    height: 60px;
+    background: #302F2C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #EFEDE3;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    opacity: 0.7;
+}
+
+/* Geteiltes Layout */
+.split {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin-top: 60px; /* Platz für Menüleiste */
+}
+
+/* Seite 2 Hintergrund */
+.page2 {
+    background: #EFEDE3; /* beige */
+}
+
+/* Linke Hälfte: Platzhalter */
+.page2 .left {
+    flex: 1; /* exakt 50% */
+    display: flex;
+    justify-content: center; /* horizontal zentriert */
+    align-items: center;     /* vertikal zentriert */
+}
+
+/* Platzhalter „photo 1“ */
+.page2 .left .photo-placeholder {
+    width: 200px;
+    height: 200px;
+    background: #fff;          /* weißes Quadrat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    color: #000;
+    border: 2px dashed #000;
+    border-radius: 8px;
+}
+
+/* Rechte Hälfte: Überschrift + Text */
+.page2 .right {
+    flex: 1; /* exakt 50% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page2 .right .text-content {
+    width: 80%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.page2-title {
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.page2-text {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* ================================
+   Responsive Anpassungen
+   ================================ */
+@media (max-width: 768px) {
+    .split {
+        flex-direction: column;
+        height: auto;
+        margin-top: 60px;
+    }
+    .left, .right {
+        width: 100%;
+        height: 50vh;
+    }
+    .photo-placeholder {
+        width: 150px;
+        height: 150px;
+        font-size: 20px;
+    }
+    .page2-title {
+        font-size: 24px;
+    }
+    .page2-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-placeholder {
+        width: 120px;
+        height: 120px;
+        font-size: 16px;
+    }
+    .page2-title {
+        font-size: 20px;
+    }
+    .page2-text {
+        font-size: 16px;
+    }
+}
